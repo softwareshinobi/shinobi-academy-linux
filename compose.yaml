@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+
+    shinobi-academy-linux:
+        
+        build: 
+
+            context: .
+
+            dockerfile: Dockerfile
+
+        container_name: shinobi-academy-linux
+
+        hostname: academy
+
+        image: softwareshinobi/shinobi-academy-linux
+
+        domainname: academy.softwareshinobi.digital
+
+        ports:
+
+            - "2222:22"

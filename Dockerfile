@@ -1,14 +1,11 @@
-
-FROM ubuntu:14.04
+FROM softwareshinobi/software-shinobi-linux
 
 ##
 
-COPY provision/ubuntu-server-provision.sh /ubuntu-server-provision.sh
+ARG DEBIAN_FRONTEND=noninteractive
 
-RUN chmod +x /ubuntu-server-provision.sh
+COPY provision/provision.bash /provision.bash
 
-RUN /ubuntu-server-provision.sh
+##RUN chmod +x /ubuntu-server-provision.sh
 
-EXPOSE 22
-
-CMD ["/usr/sbin/sshd","-D"]
+RUN bash /provision.bash
