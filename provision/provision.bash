@@ -23,4 +23,6 @@ set -x;
 
 apt-get install -y cmatrix;
 
+apt-get install -y hollywood;
+
 echo "fin."
